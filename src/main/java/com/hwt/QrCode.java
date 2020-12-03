@@ -37,7 +37,7 @@ public class QrCode {
     /**
      * 解析图像
      */
-    public static void testDecode() throws Exception{
+    public static void Decode() throws Exception{
         BufferedImage image;
         try {
             image = ImageIO.read(new File(QR_CODE_IMAGE_PATH));
@@ -64,7 +64,7 @@ public class QrCode {
             param.put("param3", "hahahahh3");
             param.put("param4", "hahahahh4");
             generateQRCodeImage(JSON.toJSONString(param), 350, 350, QR_CODE_IMAGE_PATH);
-            testDecode();
+            Decode();
         } catch (Exception e) {
             System.out.println("Could not generate QR Code, WriterException :: " + e.getMessage());
         }
